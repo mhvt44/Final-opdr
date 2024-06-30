@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --font-family: 'Lato', sans-serif;
+  --highlight-color: #FFEB3B; 
+}
+
+body {
+  background: url("/src/images/1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: var(--font-family);
+  margin: 0; 
+}
+
+nav, .max-w-1200 {
+  max-width: 1200px;
+}
+
+.highlighted-event {
+  object-fit: cover;
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease; 
+}
+
+.highlighted-event:hover {
+  transform: scale(1.03);
+}
+
+.p-card-title, .p-card, .p-card h1 {
+  color: var(--highlight-color);
+  text-transform: uppercase;
+  font-family: var(--font-family);
+}
+
+.event-image, .object-fit-cover {
+  object-fit: cover;
+  height: 200px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.p-tooltip {
+  max-width: 16rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .highlighted-event {
+    height: 40rem;
+  }
+
+  .highlighted-event img,
+  .highlighted-event div {
+    height: 50%;
+  }
+
+  .hidden-on-mobile {
+    display: none !important;
+  }
+
+  .show-on-mobile {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .show-on-mobile {
+    display: none !important;
+  }
+}
